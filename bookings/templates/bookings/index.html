@@ -1,0 +1,10 @@
+<h1>Welcome to your bookings app.</h1>
+
+<form method="post" action="{% url 'bookings:index' %}">
+    {% csrf_token %}
+    {{ day_form.as_p }}
+    {{ time_form.as_p }}
+    
+    <button name='submit'>Submit</button>
+
+</form>
